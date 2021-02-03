@@ -13,7 +13,14 @@ public class DomesticCat extends AbstractCat {
     }
 
     public String eat(){
-        return "Purrrrrrr";
+
+        double random = Math.random() * 1;
+        if (random < 0.5){
+            System.out.println(random);
+            return "It will do I suppose";
+        } else {
+            return "Purrrrrrr";
+        }
     }
 
 }
