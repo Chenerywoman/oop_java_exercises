@@ -1,5 +1,6 @@
 package com.techreturners.cats;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -44,7 +45,6 @@ public class CatTest {
         Cat lionCat = new LionCat();
         assertEquals(1100, lionCat.getAverageHeight());
     }
-
 
     @Test
     public void feedTheLion() {
