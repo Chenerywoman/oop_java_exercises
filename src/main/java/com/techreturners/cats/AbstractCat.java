@@ -2,25 +2,36 @@ package com.techreturners.cats;
 
 abstract class AbstractCat implements Cat{
 
-    private Boolean sleeping = false;
+    private boolean sleeping = false;
+    private String setting;
+    private int averageHeight;
 
-    public Boolean isAsleep() {
+    public AbstractCat(String setting, int averageHeight){
+        this.setting = setting;
+        this.averageHeight = averageHeight;
+    }
+
+    public boolean isAsleep() {
         return this.sleeping;
     }
 
-    public Boolean goToSleep() {
+    public boolean goToSleep() {
         this.sleeping = true;
         return this.sleeping;
     }
 
-    public Boolean wakeUp() {
+    public boolean wakeUp() {
         this.sleeping = false;
         return this.sleeping;
     }
 
-    abstract public String getSetting();
+    public String getSetting() {
+        return this.setting;
+    }
 
-    abstract public int getAverageHeight();
+    public int getAverageHeight() {
+        return this.averageHeight;
+    }
 
     abstract public String eat();
 
